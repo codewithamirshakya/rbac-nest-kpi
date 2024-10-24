@@ -10,7 +10,7 @@ export class UserResponseDto {
     username: string;
     email: string;
     @Type(() => Skill)
-    skills: Skill[];
+    skill: Skill;
 
     constructor(user: UserDocument) {
 
@@ -18,6 +18,6 @@ export class UserResponseDto {
         this.name = user.name;
         this.username = user.username;
         this.email = user.email;
-        this.skills = user.skills.map(skill => new SkillResponseDto(skill));
+        this.skill = new SkillResponseDto(user.skill);
     }
 }

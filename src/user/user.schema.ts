@@ -4,8 +4,10 @@ import { Document, Types } from 'mongoose';
 import { Skill } from '../skill/skill.schema';
 
 export enum Role {
-    USER = 'user',
-    ADMIN = 'admin',
+    BOARD = 'board',
+    EXPERT = 'expert',
+    TRAINER = 'trainer',
+    COMPETITOR = 'competitor',
 }
 
 export type UserDocument = User & Document;
@@ -26,11 +28,11 @@ export class User extends Document {
     @Prop({ required: true })
     password: string;
 
-    @Prop({ type: [{ type: Types.ObjectId, ref: Skill.name }] })
-    skills: Skill[];
+    @Prop({ type: Types.ObjectId, ref: Skill.name })
+    skill: Skill;
 
-    @Prop({ default: [Role.USER] })
-    roles: string[];
+    @Prop({ default: [Role.BOARD] })
+    role: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

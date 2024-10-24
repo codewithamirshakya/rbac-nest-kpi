@@ -1,4 +1,4 @@
-import { IsArray, IsEmail, IsNotEmpty, IsString, Length } from 'class-validator';
+import { IsEmail, IsNotEmpty, IsOptional, IsString, Length } from 'class-validator';
 import { Skill } from '../../skill/skill.schema';
 
 export class CreateUserDto {
@@ -16,13 +16,13 @@ export class CreateUserDto {
     @Length(6, 20)
     password: string;
 
-    @IsArray()
-    @IsNotEmpty()
-    skills: Skill[];
+    @IsString()
+    @IsOptional()
+    skill: Skill;
 
     @IsNotEmpty()
-    @IsArray()
-    roles: string[];
+    @IsString()
+    role: string;
 
     @IsNotEmpty()
     @IsString()

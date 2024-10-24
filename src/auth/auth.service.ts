@@ -19,7 +19,7 @@ export class AuthService {
     }
 
     async login(user: User) {
-        const payload = { username: user.username, sub: user.id, roles: user.roles };
+        const payload = { username: user.username, sub: user.id, roles: user.role };
         return {
             token: this.jwtService.sign(payload),
             profile: user
@@ -27,7 +27,7 @@ export class AuthService {
     }
 
     async logout(user: User) {
-        const payload = { username: user.username, sub: user.id, roles: user.roles };
+        const payload = { username: user.username, sub: user.id, roles: user.role };
         return {
             token: this.jwtService.sign(payload),
             profile: user

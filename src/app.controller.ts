@@ -8,7 +8,7 @@ import { Role } from './user/user.schema';
 @Controller('app')
 export class AppController {
   @Get('admin')
-  @Roles(Role.ADMIN)
+  @Roles(Role.EXPERT)
   @UseGuards(AuthGuard('jwt'), RolesGuard)
   getAdminData() {
     return 'This is admin data';

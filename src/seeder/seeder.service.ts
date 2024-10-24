@@ -33,19 +33,19 @@ export class SeederService {
         const adminUser = {
             username: 'admin',
             password: 'admin',
-            roles: [Role.ADMIN],
+            role: Role.EXPERT,
             name: 'admin',
             email: 'admin@admin.com',
-            skill: ['67198db8c67491d6d3351c9b'],
+            skill: '67198db8c67491d6d3351c9b',
         };
 
         const regularUser = {
             username: 'user',
             password: 'user',
-            roles: [Role.USER],
+            role: Role.BOARD,
             name: 'user',
             email: 'user@user.com',
-            skills: ['67198db8c67491d6d3351c9b'],
+            skill: '67198db8c67491d6d3351c9b',
         };
 
         // Create users

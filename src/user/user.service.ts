@@ -15,9 +15,8 @@ export class UserService {
     }
 
     async findAll(): Promise<UserDocument[]> {
-        return this.userModel.find().populate('skills').exec();
+        return this.userModel.find().populate('skill').exec();
     }
-
 
     async create(createUserDto: CreateUserDto): Promise<User> {
         const existingUser = await this.userModel.findOne({ email: createUserDto.email });
@@ -31,6 +30,6 @@ export class UserService {
             password: hashedPassword,
         });
 
-        return await newUser.save(); // This saves the user to the database
+        return await newUser.save();
     }
 }
