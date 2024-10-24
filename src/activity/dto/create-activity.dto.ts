@@ -1,4 +1,4 @@
-import { IsArray, IsDateString, IsNotEmpty, IsString, Length } from 'class-validator';
+import { IsArray, IsDateString, IsMongoId, IsNotEmpty, IsString, Length } from 'class-validator';
 import { Types } from 'mongoose';
 import { dateGreater } from '../../validators/date-greater';
 export class CreateActivityDto {
@@ -21,9 +21,11 @@ export class CreateActivityDto {
     enddate: string;
 
     @IsNotEmpty()
+
     skill: Types.ObjectId;
 
     @IsNotEmpty()
     @IsArray()
+    @IsMongoId({ each: true })
     participants: Types.ObjectId[];
 }

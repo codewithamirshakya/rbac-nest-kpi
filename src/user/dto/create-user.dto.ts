@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsOptional, IsString, Length } from 'class-validator';
+import { IsEmail, IsMongoId, IsNotEmpty, IsOptional, IsString, Length } from 'class-validator';
 import { Skill } from '../../skill/skill.schema';
 
 export class CreateUserDto {
@@ -18,6 +18,7 @@ export class CreateUserDto {
 
     @IsString()
     @IsOptional()
+    @IsMongoId({ each: true })
     skill: Skill;
 
     @IsNotEmpty()
