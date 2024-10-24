@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { HttpException, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Activity } from './activity.schema';
@@ -35,7 +35,7 @@ export class ActivityService {
 
     const result = await this.activityModel.findByIdAndDelete(id).exec();
     if (!result) {
-      throw new NotFoundException('Activity not found');
+      throw new HttpException('Data cannot be processed', 422);
     }
     return true;
   }

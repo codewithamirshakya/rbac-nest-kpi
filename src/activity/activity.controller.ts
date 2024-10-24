@@ -30,7 +30,11 @@ export class ActivityController {
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.activityService.remove(id);
+  async remove(@Param('id') id: string) {
+    const response = await this.activityService.remove(id);
+
+    return {
+      'message': 'Removed successfully',
+    }
   }
 }
