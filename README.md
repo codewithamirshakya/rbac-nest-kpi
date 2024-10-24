@@ -18,6 +18,7 @@ npm install -g ts-node
 
 - Import Sample_ServerSide.postman_collection.json
 - There is swagger api documentation which can be accessed by {URL}/api
+- Also, api postman documentation can be <https://identity.getpostman.com/handover/multifactor?user=1737238&handover_token=3d07d320-3fe1-48f4-b7c4-23b27bbf4c74>
 
 ## MongoDump
 
