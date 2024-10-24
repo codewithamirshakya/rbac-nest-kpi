@@ -1,0 +1,535 @@
+{
+	"info": {
+		"_postman_id": "f5062445-07f7-425f-9271-0cf1a189268f",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Training Activities",
+			"item": [
+				{
+					"name": "Register Activity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"skill\": \"67198db8c67491d6d3351c9b\",\n    \"title\": \"amir@gmail.com\",\n    \"description\": \"amir123\",\n    \"startdate\": \"2010-10-22T00:00:00.000Z\",\n    \"enddate\": \"2012-10-22T00:00:00.000Z\",\n    \"participants\": [\n      \"67199427be19128814fe6919\"\n    ]\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/activity",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"activity"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register Activity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"skill\": \"67198db8c67491d6d3351c9b\",\n    \"title\": \"amir@gmail.com\",\n    \"description\": \"amir123\",\n    \"startdate\": \"2010-10-22T00:00:00.000Z\",\n    \"enddate\": \"2012-10-22T00:00:00.000Z\",\n    \"participants\": [\n      \"67199427be19128814fe6919\"\n    ]\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/activity",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"activity"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update Activity",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"amissssr@gmail.com\",\n    \"description\": \"amir123\",\n    \"participants\": [\n        \"67199f620633eae8d6c0447a\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/activity/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"activity",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6719a411ccfce50e30aabdd5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Activity",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"amissssr@gmail.com\",\n    \"description\": \"amir123\",\n    \"participants\": [\n        \"67199f620633eae8d6c0447a\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/activity/:id",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"activity",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6719a411ccfce50e30aabdd5"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete Activity",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/activity/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"activity",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6719a00a1ffd577e920ac136"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Activity",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/activity/:skill_id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"activity",
+								":skill_id"
+							],
+							"variable": [
+								{
+									"key": "skill_id",
+									"value": "67198db8c67491d6d3351c9b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Activity",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/activity/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"activity",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6719a411ccfce50e30aabdd5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"board\",\n    \"password\": \"admind111\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"name\",\n    \"username\": \"expert\",\n    \"password\": \"admind111\",\n    \"email\": \"expert@gmail.com\",\n    \"skill\": \"67198db8c67491d6d3351c9b\",\n    \"role\": \"expert\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Exper User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"name\",\n    \"username\": \"expert\",\n    \"password\": \"admind111\",\n    \"email\": \"expert@gmail.com\",\n    \"skill\": \"67198db8c67491d6d3351c9b\",\n    \"role\": \"expert\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/auth/register",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Board User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"name\",\n    \"username\": \"board\",\n    \"password\": \"admind111\",\n    \"email\": \"board@gmail.com\",\n    \"skill\": \"67198db8c67491d6d3351c9b\",\n    \"role\": \"board\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/auth/register",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Skill",
+			"item": [
+				{
+					"name": "List Skills",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/skill",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"skill"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Developent Purpsose",
+			"item": [
+				{
+					"name": "Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoiNjcxYTAzZjM1YmRlNjE0MzQyY2Y0MjA2Iiwicm9sZXMiOiJleHdwZXJ0IiwiaWF0IjoxNzI5NzU4MjQ1LCJleHAiOjE3Mjk3NjE4NDV9.3c1w89uYVZVocz91ra0NGKBf_AXF8a5GJ3iRA5k1ofU",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3000"
+		}
+	]
+}
