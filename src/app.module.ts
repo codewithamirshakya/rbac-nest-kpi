@@ -20,7 +20,7 @@ import { User, UserSchema } from './user/user.schema';
     SkillModule,
     ActivityModule,
     JwtModule.register({
-      secret: process.env.JWT_SECRET,
+      secret: 'test',
       signOptions: { expiresIn: '1h' }, // Token expiration time
     }),
   ],

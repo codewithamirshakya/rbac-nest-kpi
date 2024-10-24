@@ -16,8 +16,8 @@ export class ActivityService {
     return this.activityModel.create(createActivityDto);
   }
 
-  findAll() {
-    return this.activityModel.find().populate('skill').populate('participants', 'username email').exec();
+  findAll(skillId: string) {
+    return this.activityModel.find({ skill: skillId }).populate('skill').populate('participants', 'username email').exec();
   }
 
   findOne(id: string) {
